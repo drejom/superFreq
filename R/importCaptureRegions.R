@@ -252,8 +252,7 @@ importEnsemblData = function(x, saveDirectory, genome, verbose=T) {
   else {
     if ( verbose ) catLog('waiting for biomaRt/ensembl server...')
     if ( genome == 'hg19' ) {
-      mart = useMart(biomart='ENSEMBL_MART_ENSEMBL', dataset = 'hsapiens_gene_ensembl',
-        version='Ensembl Genes 90', host='grch37.ensembl.org')
+      mart = useMart(biomart='ENSEMBL_MART_ENSEMBL', dataset = 'hsapiens_gene_ensembl')
       symbolName = 'hgnc_symbol'
       ensemblName = 'ensembl_transcript_id'
       biotype = 'gene_biotype'
